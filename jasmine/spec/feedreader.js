@@ -43,7 +43,12 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-    });
+        it('name defined',function(){
+            for(let feed of allFeeds){
+            expect(feed.name.toBeDefined);
+            expect(feed.name).not.toBe(0);
+        }
+        });
 
 
     /* TODO: Write a new test suite named "The menu" */
@@ -75,4 +80,5 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-}());
+});
+})
