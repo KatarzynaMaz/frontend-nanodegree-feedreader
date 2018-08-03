@@ -49,9 +49,10 @@ $(function() {
             expect(feed.name).not.toBe(0);
         }
         });
+    });
 /* TODO: Write a new test suite named "The menu" */
 
-describe('The menu', function(){
+    describe('The menu', function(){
         /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
@@ -61,7 +62,7 @@ describe('The menu', function(){
         it('is hidden', function(){
             const body = document.querySelector('body');
             expect(body.classList.contains('menu-hidden')).toBe(true);
-        })
+        });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -75,13 +76,13 @@ describe('The menu', function(){
              expect(body.classList.contains('menu-hidden')).toBe(false);
              menu.click();
              expect(body.classList.contains('menu')).toBe(false);
-         })
-})
-    
+         });
+    }); 
    
-
     /* TODO: Write a new test suite named "Initial Entries" */
+    describe('Initial Entries', function(){
 
+    });
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
@@ -96,4 +97,4 @@ describe('The menu', function(){
          * Remember, loadFeed() is asynchronous.
          */
 });
-})
+
