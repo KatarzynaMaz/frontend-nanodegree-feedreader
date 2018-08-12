@@ -34,7 +34,7 @@ $(function() {
         it('url defined', function(){
             for(let feed of allFeeds){
                 console.log(feed);
-                expect(feed.url.toBeDefined);
+                expect(feed.url).toBeDefined;
                 expect(feed.url.length).not.toBe(0);
             }
         });
@@ -45,7 +45,7 @@ $(function() {
          */
         it('name defined',function(){
             for(let feed of allFeeds){
-            expect(feed.name.toBeDefined);
+            expect(feed.name).toBeDefined;
             expect(feed.name).not.toBe(0);
         }
         });
@@ -60,6 +60,7 @@ $(function() {
          */
 
         it('is hidden', function(){
+            //defining variable body
             const body = document.querySelector('body');
             expect(body.classList.contains('menu-hidden')).toBe(true);
         });
@@ -70,6 +71,7 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
          it('toogles on and off', function(){
+            //defining variables body and menu
              const body = document.querySelector('body');
              const menu = document.querySelector('.menu-icon-link');
              menu.click();
@@ -88,6 +90,8 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        //done() function will let Jasmine know that the beforeEach function has
+        //finished and so Jasmine can proceed with the test
         beforeEach(function(done){
             loadFeed(0,done);
         });
@@ -98,13 +102,46 @@ $(function() {
         });
 
     });
-
+ 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
     describe('New Feed Selection', function(){
+        //defining variable feed
+        const feed = document.querySelector('.feed');
+        //storing the first feed's content in an empty array
+        firstFeed = [];
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-});
+        //we need to load 2 different feeds and check that the feed content changes
+        //we will use done() function to handle async within beforeEach
+        //since done() can only be called once, we call it in the final
+        //async function to let Jasmine know when to continue
+        beforeEach(function(done){
+            //calling the first feed
+            loadFeed(0);
+            //converting the first feed's children elements into an array list
+            //then looping over each entry and pushing innerText to
+            //firstFeed array
+            Array.from(feed.children).forEach(function(entry){
+                firstFeed.push(entry.innerText);
+            });
+            //console.log(feed.children[0].innerText);
+
+            //calling the new feed
+            loadFeed(1,done);
+        });
+
+        it('content changes', function(){
+            //converting the new feed's children into an array and looping
+            //over each entry
+            Array.from(feed.children).forEach(function(entry,index){
+                //using index parameter we will check the first feed against the new feed
+                //console.log(entry.innerText, firstFeed[index], entry.innerText === firstFeed[index]);
+                expect(entry.innerText === firstFeed[index]).toBe(false);
+            });
+           // console.log(feed.children[0].innerText);
+        });
+    });
 });
