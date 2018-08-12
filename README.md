@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-A project for Front End Web Development Nanodegree. In this project we were given a web-based application "Feed Reader" that reads RSS feeds. We needed to write several (descrived below) test suites. When complete - all tests should pass. Jasmine Testing Framework was used.
+A project for Front End Web Development Nanodegree. In this project we were given a web-based application "Feed Reader" that reads RSS feeds. We needed to write several test suites. When complete - all tests should pass. Jasmine Testing Framework was used.
 
 
 ## To start testing 
@@ -18,8 +18,8 @@ When you open index.html file in your browser, the tests will appear at the bott
 1. A test to make sure that `allFeeds` variable has been defined and is not empty.
 2. A test that loops through each feed in the `allFeeds` object and ensures it has url defined and that the url is not       empty.
 3. A test that loops through each feed in the `allFeeds` object and ensures it has a name defined and that the name is       not empty.
-4. A test that ensures the menu element is hidden by default. 
-5. A test that ensures the menu changes visibility when the menu icon is clicked. This test should have two expectations:    does the menu display when clicked and does it hide when clicked again.
+4. A test that ensures the `menu` element is hidden by default. 
+5. A test that ensures the `menu` changes visibility when the menu icon is clicked. This test should have two expectations:    does the menu display when clicked and does it hide when clicked again.
 6. A test that ensures when the `loadFeed` function is called and completes its work, there is at least a single `.entry`    element within the `.feed` container.
 7. A test that ensures when a new feed is loaded by the `loadFeed` function that the content actually changes.
 
