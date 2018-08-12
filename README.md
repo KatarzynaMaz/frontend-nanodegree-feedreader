@@ -25,9 +25,9 @@ When you open index.html file in your browser, the tests will appear at the bott
 
 ## Credits
 
-Matthew Cranford Project Walkthrough [Blog](https://matthewcranford.com/feed-reader-walkthrough-part-1-starter-code/)
-Ryan Boris Walkthrough [video](https://www.youtube.com/watch?v=7kOBXPbDmyw&feature=youtu.be)
-Slack and Knowledge discussions
+* Matthew Cranford Project Walkthrough [Blog](https://matthewcranford.com/feed-reader-walkthrough-part-1-starter-code/)
+* Ryan Boris Walkthrough [video](https://www.youtube.com/watch?v=7kOBXPbDmyw&feature=youtu.be)
+* Slack and Knowledge discussions
 
 ## Contributing
 
