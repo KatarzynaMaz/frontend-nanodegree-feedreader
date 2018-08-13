@@ -52,18 +52,18 @@ $(function() {
         it('is hidden', function(){
             expect(body.classList.contains('menu-hidden')).toBe(true);
         });
-
         
-         it('toogles on and off', function(){
+        it('toogles on and off', function(){
             //defining variables menu
             const menu = document.querySelector('.menu-icon-link');
+
              menu.click();
              expect(body.classList.contains('menu-hidden')).toBe(false);
              menu.click();
              expect(body.classList.contains('menu')).toBe(false);
-         });
+        });
     }); 
-   
+    //new test suite 'Initial Entries'
     describe('Initial Entries', function(){
         /* A test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -78,8 +78,7 @@ $(function() {
                 //selecting entry elements inside feed
                 const feedEntries = document.querySelectorAll ('.feed .entry');
                 expect(feedEntries.length>0).toBe(true); 
-
-        });
+            });
     });
     describe('New Feed Selection', function(){
         let feed;
@@ -115,7 +114,6 @@ $(function() {
                 //using index parameter we will check the first feed against the new feed
                 expect(entry.innerText === firstFeed[index]).toBe(false);
             });
-           // console.log(feed.children[0].innerText);
         });
     });
 });
