@@ -7,7 +7,7 @@ A project for Front End Web Development Nanodegree. In this project we were give
 
 ## To start testing 
 
-To start testing either clone or download the repository to your local computer and then open index.html file in your browser.
+To start testing either clone or download the [repository](https://github.com/KatarzynaMaz/frontend-nanodegree-feedreader) to your local computer and then open index.html file in your browser.
 
 ## How to test?
 
