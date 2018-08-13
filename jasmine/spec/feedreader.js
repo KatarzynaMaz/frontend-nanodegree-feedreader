@@ -54,7 +54,7 @@ $(function() {
         });
         
         it('toogles on and off', function(){
-            //defining variables menu
+            //defining variable menu
             const menu = document.querySelector('.menu-icon-link');
 
              menu.click();
